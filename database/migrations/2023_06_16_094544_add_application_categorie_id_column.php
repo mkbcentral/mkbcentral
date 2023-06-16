@@ -12,13 +12,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('applications', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable();
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->text('detail')->nullable();
-            $table->timestamps();
+        Schema::table('applications', function (Blueprint $table) {
+            $table->foreignIdFor(ApplicationCategory::class)->nullable()->constrained();
         });
     }
 
@@ -27,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('applications');
+        Schema::table('applications', function (Blueprint $table) {
+            $table->dropColumn('application_categorie_id');
+        });
     }
 };
