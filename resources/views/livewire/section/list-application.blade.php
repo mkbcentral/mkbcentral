@@ -3,7 +3,7 @@
     <section class=" pt-20  lg:pt-[80px] lg:pb-5">
         <div class="container mx-auto">
             <div class="text-center text-slate-600 pb-12">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl">Un logiciel pour un besoin</h1>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl">Nos logiciels</h1>
             </div>
             <div class="-mx-4 flex flex-wrap justify-center">
                 @foreach ($listApplications as $application)

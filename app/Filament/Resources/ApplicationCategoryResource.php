@@ -17,7 +17,7 @@ class ApplicationCategoryResource extends Resource
 {
     protected static ?string $model = ApplicationCategory::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-rss';
 
     public static function form(Form $form): Form
     {

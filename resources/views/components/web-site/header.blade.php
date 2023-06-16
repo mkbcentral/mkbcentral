@@ -7,13 +7,13 @@
                 <div class="w-full px-4 lg:w-1/2">
                     <div class="max-w-[490px] py-[10px] lg:py-[110px]">
                         <span class="mb-3 block text-lg font-semibold text-white">
-                            {{ $info->title }}
+                            {{ $info?->title }}
                         </span>
                         <h2 class="mb-6 text-3xl font-bold text-white sm:text-4xl md:text-[40px]">
-                            {{ $info->subtitle }}
+                            {{ $info?->subtitle }}
                         </h2>
                         <p class="mb-9 text-base leading-relaxed text-white">
-                            {{ $info->paragraph }}
+                            {{ $info?->paragraph }}
                         </p>
                         <a href="javascript:void(0)"
                             class="inline-block rounded-full border border-white py-3 px-9 text-base font-medium text-white hover:bg-white hover:text-primary">
@@ -27,7 +27,7 @@
         <div>
             <div class="top-0 right-0 z-10 h-full w-full lg:absolute lg:w-1/2">
                 <div class="flex h-full w-full items-center justify-center">
-                    <img src="{{ asset('storage/' . $info->image) }}" alt="image"
+                    <img src="{{ asset('storage/' . $info?->image) }}" alt="image"
                         class="top-0 left-0 z-[-1] h-full w-full object-cover object-center lg:absolute" />
                     <a href="javascript:void(0)"
                         @click="videoOpen = true; videoSrc='https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1' "

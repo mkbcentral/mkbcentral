@@ -17,7 +17,7 @@ class SiteHeaderInfoResource extends Resource
 {
     protected static ?string $model = SiteHeaderInfo::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-hashtag';
 
     public static function form(Form $form): Form
     {
