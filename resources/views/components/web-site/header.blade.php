@@ -41,7 +41,21 @@
                     <div class="relative z-10 inline-block pt-11 lg:pt-0">
                         <img src="{{ asset('storage/' . $info?->image) }}" alt="hero"
                             class="max-w-full lg:ml-auto" />
+                        <a href="javascript:void(0)"
+                            @click="videoOpen = true; videoSrc='https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1' "
+                            class="absolute z-40 bottom-0 left-56 top-24 flex h-20 w-20 items-center justify-center rounded-full
+                             bg-primary md:h-[100px] md:w-[100px]">
+                            <span
+                                class="absolute top-0 bu right-0 z-[-1] h-full w-full animate-ping rounded-full bg-primary bg-opacity-20 delay-300 duration-1000"></span>
+                            <svg width="23" height="27" viewBox="0 0 23 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.5 12.634C23.1667 13.0189 23.1667 13.9811 22.5 14.366L2.25 26.0574C1.58333 26.4423 0.750001 25.9611 0.750001 25.1913L0.750002 1.80866C0.750002 1.03886 1.58334 0.557731 2.25 0.942631L22.5 12.634Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </div>
