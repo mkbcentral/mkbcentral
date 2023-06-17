@@ -4,6 +4,8 @@ namespace App\View\Components\WebSite;
 
 use App\Models\Application;
 use App\Models\Client;
+use App\Models\OurInfo;
+use App\Models\SiteHeaderInfo;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -25,6 +27,8 @@ class Footer extends Component
     {
         $listClients=Client::all();
         $listApplications=Application::all();
-        return view('components.web-site.footer',compact(['listClients','listApplications']));
+        $info=OurInfo::find(1);
+        $otherInfo=SiteHeaderInfo::find(1);
+        return view('components.web-site.footer',compact(['listClients','listApplications','info','otherInfo']));
     }
 }

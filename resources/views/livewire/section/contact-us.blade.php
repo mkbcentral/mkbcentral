@@ -10,9 +10,7 @@
                             CONTACTEZ-NOUS
                         </h2>
                         <p class="text-body-color mb-9 text-base leading-relaxed">
-                            Notre équipe est disponible 24h/24h pour repondre à vos préocupation,
-                            et équipe de gestion du support disponible pour vousn secourir en cas de
-                            problème technique.
+                            {{ $info?->description }}
                         </p>
                         <div class="mb-8 flex w-full max-w-[370px]">
                             <div
@@ -27,7 +25,7 @@
                             <div class="w-full">
                                 <h4 class="text-dark mb-1 text-xl font-bold">Our Location</h4>
                                 <p class="text-body-color text-base">
-                                    N° 2563,Av/MANIEMA,C/Lubumbashi, R.D Congo
+                                    {{$info?->adress}}
                                 </p>
                             </div>
                         </div>
@@ -45,7 +43,7 @@
                             </div>
                             <div class="w-full">
                                 <h4 class="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                                <p class="text-body-color text-base">(+62)81 971 330 007</p>
+                                <p class="text-body-color text-base">{{$info->phone}} | {{$info->other_phone}}</p>
                             </div>
                         </div>
                         <div class="mb-8 flex w-full max-w-[370px]">
@@ -58,7 +56,7 @@
                             </div>
                             <div class="w-full">
                                 <h4 class="text-dark mb-1 text-xl font-bold">Email Address</h4>
-                                <p class="text-body-color text-base">contact@mkbcentral.com</p>
+                                <p class="text-body-color text-base">{{$info->email}} | {{$info->other_email}}</p>
                             </div>
                         </div>
                     </div>

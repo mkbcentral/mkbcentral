@@ -1,6 +1,11 @@
-<div class="w-full px-4 lg:w-1/2 xl:w-5/12">
+<div class="w-full px-4 lg:w-1/2 xl:w-5/12" >
     @if (session()->has('message'))
-        <div class="bg-green-600 text-slate-200 p-4 rounded-md">
+        <div x-data="{ shwoNotification: true }" x-init="setTimeout(() => shwoNotification = false, 3000)"
+            class="bg-green-500 text-slate-200 p-4 flex items-center  rounded-md">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
             {{ session('message') }}
         </div>
     @endif
@@ -40,12 +45,9 @@
             </div>
             <div>
                 <button type="submit"
-                    class="bg-primary border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90">
-                    @if ($isLoading == false)
-                        <span>Envoyer</span>
-                    @else
-                        <span>Envoie en cours...</span>
-                    @endif
+                    class="bg-primary border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90 flex items-center justify-center space-x-2">
+                    <x-spiner class="h-5 w-5" wire:loading wire:target='sendEmaiContact' />
+                    <span> Envoyer</span>
                 </button>
             </div>
         </form>
