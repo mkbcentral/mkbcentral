@@ -1,5 +1,5 @@
 <div>
-    <span class="absolute left-0 bottom-0 z-[-1] animate-ping">
+    <span class="absolute left-0 bottom-0 z-[-1] ">
         <svg width="217" height="229" viewBox="0 0 217 229" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
