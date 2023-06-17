@@ -1,19 +1,3 @@
-<!-- ====== Navbar Section Start -->
-<header x-data="{
-    navbarOpen: false,
-}" class="absolute left-0 top-0 z-50 w-full bg-slate-200 text-slate-100">
-    <div class="container mx-auto">
-        <div class="relative -mx-4 flex items-center justify-between">
-            <div class="w-60 max-w-full px-4">
-                <a href="javascript:void(0)" class="block w-full py-5">
-                    <h1 class="text-2xl text-slate-800 font-bold">mkbCentral</h1>
-                </a>
-            </div>
-            <x-web-site.navbar />
-        </div>
-    </div>
-</header>
-<!-- ====== Navbar Section End -->
 <!-- ====== Hero Section Start -->
 <div class="relative pt-[120px] pb-[110px] lg:pt-[70px] bg-blue-500"
     style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);">
