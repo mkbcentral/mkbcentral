@@ -8,7 +8,7 @@
                     <div class="mb-10 w-full">
                         <a href="javascript:void(0)"
                             class="w-full py-5 text-2xl font-bold mb-6 inline-block max-w-[160px]">
-                            MKBcentral
+                            <img src="{{ asset('logo.svg') }}" alt="">
                         </a>
                         <p class="text-body-color mb-7 text-base">
                            {{$otherInfo?->title}}

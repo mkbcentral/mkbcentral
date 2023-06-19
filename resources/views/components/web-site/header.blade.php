@@ -5,8 +5,8 @@
     <div class="container mx-auto">
         <div class="relative -mx-4 flex items-center justify-between">
             <div class="w-60 max-w-full px-4">
-                <a href="javascript:void(0)" class="block w-full py-5">
-                    <h1 class="text-2xl text-slate-800 font-bold">mkbCentral</h1>
+                <a href="javascript:void(0)" class="block w-full py-4">
+                   <img src="{{ asset('logo.svg') }}" alt="">
                 </a>
             </div>
             <x-web-site.navbar />

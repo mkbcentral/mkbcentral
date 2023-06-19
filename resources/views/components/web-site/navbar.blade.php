@@ -45,13 +45,13 @@
     <div class="hidden justify-end pr-16 sm:flex lg:pr-0">
       <a
         href="javascript:void(0)"
-        class="text-dark hover:text-primary py-3 px-7 text-base font-medium"
+        class="text-dark hover:text-primary py-2 px-7 text-base font-medium"
       >
         Se conntecter
       </a>
       <a
         href="javascript:void(0)"
-        class="bg-primary rounded-lg py-3 px-7 text-base font-medium text-white hover:bg-opacity-90"
+        class="bg-primary rounded-lg py-2 px-7 text-base font-medium text-white hover:bg-opacity-90"
       >
         Essaie gratuit
       </a>
