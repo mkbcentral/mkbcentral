@@ -6,7 +6,7 @@
         <div class="relative -mx-4 flex items-center justify-between">
             <div class="w-60 max-w-full px-4">
                 <a href="javascript:void(0)" class="block w-full py-4">
-                   <img src="{{ asset('logo.svg') }}" alt="">
+                    <img src="{{ asset('logo.svg') }}" alt="">
                 </a>
             </div>
             <x-web-site.navbar />
@@ -46,7 +46,8 @@
                             class="absolute z-40 bottom-0 left-56 top-24 flex h-20 w-20 items-center justify-center rounded-full
                              bg-primary md:h-[100px] md:w-[100px]">
                             <span
-                                class="absolute top-0 bu right-0 z-[-1] h-full w-full animate-ping rounded-full bg-primary bg-opacity-20 delay-300 duration-1000"></span>
+                                class="absolute top-0 right-0 z-[-1] h-full  w-full animate-ping rounded-full
+                                 bg-primary bg-opacity-20 delay-300 duration-1000"></span>
                             <svg width="23" height="27" viewBox="0 0 23 27" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Application;
+use App\Models\Subscription;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -20,7 +22,8 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $listApplication=Application::all();
+        return view('auth.register',compact('listApplication'));
     }
 
     /**
@@ -32,20 +35,30 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'application_id' => ['required', 'numeric'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
+        if ($request->is_free_trial =='on') {
+            $status='IS_FREE_TRIAL';
+         }elseif($request->is_payment == 'on'){
+             $status='IS_PAYMENT';
+         }else{
+            $status='IS_FREE_TRIAL';
+         }
+         Subscription::create([
+            'user_id'=>$user->id,
+            'application_id'=>$request->application_id,
+            'status'=>$status
+        ]);
         event(new Registered($user));
-
         Auth::login($user);
-
         return redirect(RouteServiceProvider::HOME);
     }
 }

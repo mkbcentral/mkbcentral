@@ -18,7 +18,7 @@ class OurInfoResource extends Resource
 {
     protected static ?string $model = OurInfo::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-information-circle';
 
     public static function form(Form $form): Form
     {
