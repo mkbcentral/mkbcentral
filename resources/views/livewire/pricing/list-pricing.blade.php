@@ -17,7 +17,7 @@
             <div class="flex justify-center items-center py-3 mb-3">
                 @foreach ($listPlan as $plan)
                     <button type="button" wire:click.prevent='selectPlan({{ $plan }})'
-                        class="{{ $selectedPlanId == $plan->id ? 'bg-indigo-800 hover:bg-indigo-500 hover:text-slate-300' : ' text-blue-700 font-bold text-lg' }}  p-2 rounded-xl text-green-300 space-x-2 ">{{ $plan->name }}</button>
+                        class="{{ $selectedPlanId == $plan->id ? 'bg-indigo-800 hover:bg-indigo-500 hover:text-slate-300' : ' text-slate-400 font-bold text-lg' }}  p-2 rounded-xl text-green-300 space-x-2 ">{{ $plan->name }}</button>
                 @endforeach
             </div>
             <div class="-mx-4 flex flex-wrap justify-center">

@@ -18,6 +18,8 @@ class ListPricing extends Component
         $this->planSelected=$plan;
         if($plan->name=='Annuel'){
             $this->valueForCalculatePrice=12;
+        }else{
+            $this->valueForCalculatePrice=1;
         }
     }
 
